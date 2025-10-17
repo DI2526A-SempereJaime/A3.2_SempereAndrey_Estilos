@@ -1,0 +1,2 @@
+C:\Users\alumno\source\repos\A3.2.1_FormularioStackPanel_Estilos\A3.2.2_EquiposNBA_Estilos\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\alumno\source\repos\A3.2.1_FormularioStackPanel_Estilos\A3.2.2_EquiposNBA_Estilos\obj\Debug\net8.0-windows\A3.2.2_EquiposNBA_Estilos_MarkupCompile.cache
