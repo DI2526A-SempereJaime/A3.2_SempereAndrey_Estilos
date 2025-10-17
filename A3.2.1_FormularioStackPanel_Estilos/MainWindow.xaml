@@ -1,0 +1,71 @@
+﻿<Window x:Class="A3._2._1_FormularioStackPanel_Estilos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A3._2._1_FormularioStackPanel_Estilos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="StackPanelStyleDefault" TargetType="StackPanel">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Margin" Value="0,0,0,20"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5,3,5,3"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="15,3,15,3"/>
+        </Style>
+        <Style x:Key="StackPanelGradientNombre" TargetType="StackPanel" BasedOn="{StaticResource StackPanelStyleDefault}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="Green" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>                
+            </Setter>
+        </Style>
+        <Style x:Key="StackPanelGradientDireccion" TargetType="StackPanel" BasedOn="{StaticResource StackPanelStyleDefault}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="Red" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="StackPanelGradientCorreoElectronico" TargetType="StackPanel" BasedOn="{StaticResource StackPanelStyleDefault}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="Purple" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+
+            <StackPanel Style="{StaticResource StackPanelGradientNombre}">
+                <TextBlock Text="Nombre"/>
+                <TextBox/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPanelGradientDireccion}">
+                <TextBlock Text="Direccion"/>
+                <TextBox/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackPanelGradientCorreoElectronico}">
+                <TextBlock Text="Correo Electronico"/>
+                <TextBox/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
