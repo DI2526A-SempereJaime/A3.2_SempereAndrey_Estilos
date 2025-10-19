@@ -1,0 +1,81 @@
+﻿<Window x:Class="A3._1._4_VisorImagenes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A3._1._4_VisorImagenes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1200">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Height" Value="20"/>
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="200"/>
+        </Style>
+
+        <Style x:Key="BorderFondoSuperior" TargetType="Border">
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+
+        <Style x:Key="BorderFondoLateralExterior" TargetType="Border">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+
+        <Style x:Key="BorderFondoLateralInterior" TargetType="Border">
+            <Setter Property="Background" Value="LightGreen"/>
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <DockPanel>
+
+            <TextBlock Text="Visor de Imagenes"
+                       DockPanel.Dock="Top"
+                       HorizontalAlignment="Center"/>
+
+            <Border Style="{StaticResource BorderFondoSuperior}" DockPanel.Dock="Bottom">
+                <DockPanel LastChildFill="False" VerticalAlignment="Center">
+                    <TextBlock Text="Nº Imagenes" DockPanel.Dock="Left"/>
+                    <TextBlock Text="Diseñado por Jaime Sempere Andreu" DockPanel.Dock="Right"/>
+                </DockPanel>
+            </Border>
+
+            <Border Style="{StaticResource BorderFondoLateralExterior}" DockPanel.Dock="Right">
+                <Border Style="{StaticResource BorderFondoLateralInterior}">
+                    <DockPanel LastChildFill="False">
+                        <Button Content="Añadir Imagen" DockPanel.Dock="Top" Margin="0,15,0,5"/>
+                        <Button Content="Eliminar Imagen" DockPanel.Dock="Top"/>
+                        <Button Content="Eliminar todas" DockPanel.Dock="Top"/>
+                        <Button Content="Rotar" DockPanel.Dock="Bottom" Margin="0,5,0,15"/>
+                        <Button Content="Recortar" DockPanel.Dock="Bottom"/>
+                    </DockPanel>
+                </Border>
+            </Border>
+
+            <WrapPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+                <Image Source="/Image/episodioIV.jpg"/>
+            </WrapPanel>
+
+        </DockPanel>
+    </Grid>
+</Window>
